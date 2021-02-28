@@ -45,15 +45,9 @@
         <xhtml:div *ngIf="parallelism < 2; else elseAgeBlock">
         </xhtml:div>
         <ng-template #elseAgeBlock>
-            <svg:g class="node node-rect">
-            <a xlink:href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager{{i}}" *ngFor="let i of Arr(num).fill(1)"
-              target="_blank">
-              <rect fill="#F79134"
-                x="..." y="..."
-                width="94" height="94">
-              </rect>
-            </a>
-            </svg:g>
+                <xhtml:a target="_blank" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager{{i}}" *ngFor="let i of Arr(num).fill(1)">
+                     taskmanager{{i}}
+                </xhtml:a>
         </ng-template>
    </svg:foreignObject>
 </svg:g>
