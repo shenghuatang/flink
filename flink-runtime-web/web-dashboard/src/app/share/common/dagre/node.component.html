@@ -24,7 +24,7 @@
             <h4 class="content-wrap">
                 <xhtml:div class="detail">{{operator}}</xhtml:div>
                 <xhtml:div class="detail description">{{description}}</xhtml:div>
-                <xhtml:div class="node-label">Parallelism: {{parallelism}}</xhtml:div>
+                <xhtml:div class="node-label">Total Parallelism: {{parallelism}}</xhtml:div>
                 <xhtml:div class="node-label metric" title="Maximum back pressured percentage across all subtasks">
                     Backpressured (max): {{prettyPrint(backPressuredPercentage)}}
                 </xhtml:div>
@@ -37,7 +37,22 @@
                 <xhtml:div class="detail last" *ngIf="operatorStrategy">
                     Operation: {{operatorStrategy}}
                 </xhtml:div>
+                <xhtml:a href="http://ec2-34-231-243-255.compute-1.amazonaws.com:5000/hostinfo">
+                     host info
+                </xhtml:a>
             </h4>
         </xhtml:div>
-    </svg:foreignObject>
+        <xhtml:div *ngIf="parallelism < 2; else elseAgeBlock">
+        </xhtml:div>
+        <ng-template #elseAgeBlock>
+            <svg:g class="node node-rect">
+                 <svg:foreignObject class="node-labels-container" [attr.x]="3" [attr.y]="height ? -height / 2 : 0"
+                       [attr.width]="199" [attr.height]="height/parallelism">
+                         <xhtml:a href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager{{i}}" *ngFor="let i of Arr(num).fill(1)">
+                                click to monitoring the container
+                         </xhtml:a>
+                 </svg:foreignObject>
+            </svg:g>
+        </ng-template>
+   </svg:foreignObject>
 </svg:g>
