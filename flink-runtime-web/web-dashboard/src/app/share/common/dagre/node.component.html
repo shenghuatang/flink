@@ -38,20 +38,20 @@
                     Operation: {{operatorStrategy}}
                 </xhtml:div>
                 <xhtml:div class="node-label metric" >
-                    <xhtml:a href="http://ec2-34-231-243-255.compute-1.amazonaws.com:5000/hostinfo" target="_blank">
+                    <xhtml:a href="http://ec2-35-171-47-31.compute-1.amazonaws.com:5000/hostinfo" target="_blank">
                          host info
                     </xhtml:a>
                 </xhtml:div>
                 <xhtml:div style="border: thin solid black" class="node-label metric" *ngIf="parallelism  && parallelism == 1; else elseAgeBlock">
-                     <xhtml:a target="_blank" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager1" >
+                     <xhtml:a target="_blank" href="http://ec2-35-171-47-31.compute-1.amazonaws.com:8080/docker/taskmanager1" >
                          task 1
                     </xhtml:a>
                 </xhtml:div>
             <ng-template #elseAgeBlock>
-                    <xhtml:a target="_blank" style="padding-right: 5px; padding-left: 5px; border: thin solid black" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager1" >
+                    <xhtml:a target="_blank" style="padding-right: 5px; padding-left: 5px; border: thin solid black" href="http://ec2-35-171-47-31.compute-1.amazonaws.com:8080/docker/taskmanager1" >
                          task 1
                     </xhtml:a>
-                    <xhtml:a target="_blank" style="padding-right: 5px; padding-left: 5px; border: thin solid black" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager2" >
+                    <xhtml:a target="_blank" style="padding-right: 5px; padding-left: 5px; border: thin solid black" href="http://ec2-35-171-47-31.compute-1.amazonaws.com:8080/docker/taskmanager2" >
                          task 2
                     </xhtml:a>
             </ng-template>
