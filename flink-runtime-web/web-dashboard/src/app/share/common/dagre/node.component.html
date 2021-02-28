@@ -37,23 +37,26 @@
                 <xhtml:div class="detail last" *ngIf="operatorStrategy">
                     Operation: {{operatorStrategy}}
                 </xhtml:div>
-                <xhtml:a href="http://ec2-34-231-243-255.compute-1.amazonaws.com:5000/hostinfo" target="_blank">
-                     host info
-                </xhtml:a>
+                <xhtml:div class="node-label metric" >
+                    <xhtml:a href="http://ec2-34-231-243-255.compute-1.amazonaws.com:5000/hostinfo" target="_blank">
+                         host info
+                    </xhtml:a>
+                </xhtml:div>
+                <xhtml:div style="border: thin solid black" class="node-label metric" *ngIf="parallelism  && parallelism == 1; else elseAgeBlock">
+                     <xhtml:a target="_blank" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager1" >
+                         taskmanager1
+                    </xhtml:a>
+                </xhtml:div>
+            <ng-template #elseAgeBlock>
+                    <xhtml:a target="_blank" style="border: thin solid black" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager1" >
+                         taskmanager1
+                    </xhtml:a>
+                    <xhtml:a target="_blank" style="border: thin solid black" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager2" >
+                         taskmanager2
+                    </xhtml:a>
+            </ng-template>
             </h4>
         </xhtml:div>
-        <xhtml:div *ngIf="parallelism  && parallelism == 1; else elseAgeBlock">
-            <xhtml:a target="_blank" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager1" >
-                     taskmanager1
-                </xhtml:a>
-        </xhtml:div>
-        <ng-template #elseAgeBlock>
-                <xhtml:a target="_blank" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager1" >
-                     taskmanager1
-                </xhtml:a>
-                <xhtml:a target="_blank" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager2" >
-                     taskmanager2
-                </xhtml:a>
-        </ng-template>
+
    </svg:foreignObject>
 </svg:g>
