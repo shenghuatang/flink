@@ -37,7 +37,7 @@
                 <xhtml:div class="detail last" *ngIf="operatorStrategy">
                     Operation: {{operatorStrategy}}
                 </xhtml:div>
-                <xhtml:a href="http://ec2-34-231-243-255.compute-1.amazonaws.com:5000/hostinfo">
+                <xhtml:a href="http://ec2-34-231-243-255.compute-1.amazonaws.com:5000/hostinfo" target="_blank">
                      host info
                 </xhtml:a>
             </h4>
@@ -45,8 +45,11 @@
         <xhtml:div *ngIf="parallelism < 2; else elseAgeBlock">
         </xhtml:div>
         <ng-template #elseAgeBlock>
-                <xhtml:a target="_blank" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager{{i}}" *ngFor="let i of Arr(num).fill(1)">
-                     taskmanager{{i}}
+                <xhtml:a target="_blank" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager1" >
+                     taskmanager1
+                </xhtml:a>
+                <xhtml:a target="_blank" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager2" >
+                     taskmanager2
                 </xhtml:a>
         </ng-template>
    </svg:foreignObject>
