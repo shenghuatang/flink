@@ -42,7 +42,10 @@
                 </xhtml:a>
             </h4>
         </xhtml:div>
-        <xhtml:div *ngIf="!parallelism  && parallelism != 1; else elseAgeBlock">
+        <xhtml:div *ngIf="parallelism  && parallelism == 1; else elseAgeBlock">
+            <xhtml:a target="_blank" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager1" >
+                     taskmanager1
+                </xhtml:a>
         </xhtml:div>
         <ng-template #elseAgeBlock>
                 <xhtml:a target="_blank" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager1" >
