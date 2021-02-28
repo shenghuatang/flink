@@ -44,15 +44,15 @@
                 </xhtml:div>
                 <xhtml:div style="border: thin solid black" class="node-label metric" *ngIf="parallelism  && parallelism == 1; else elseAgeBlock">
                      <xhtml:a target="_blank" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager1" >
-                         taskmanager1
+                         task 1
                     </xhtml:a>
                 </xhtml:div>
             <ng-template #elseAgeBlock>
                     <xhtml:a target="_blank" style="border: thin solid black" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager1" >
-                         taskmanager1
+                         task 1
                     </xhtml:a>
                     <xhtml:a target="_blank" style="border: thin solid black" href="http://ec2-34-231-243-255.compute-1.amazonaws.com:8080/docker/taskmanager2" >
-                         taskmanager2
+                         task 2
                     </xhtml:a>
             </ng-template>
             </h4>
